@@ -31,6 +31,7 @@ N = 500
 
 
 def getDataPoint(quote):
+    # I updated this function by fixing the correct data for price
     """Produce all of the needed values to generate a datapoint"""
     """ ------------- Update this function ------------- """
     stock = quote["stock"]
@@ -41,6 +42,7 @@ def getDataPoint(quote):
 
 
 def getRatio(price_a, price_b):
+    # I updated this function to ouput the ratio between the two stocks
     if price_b == 0 or price_a == 0:
         return 0
     """Get ratio of price_a and price_b"""
@@ -58,7 +60,7 @@ if __name__ == "__main__":
         quotes = json.loads(
             urllib.request.urlopen(QUERY.format(random.random())).read()
         )
-
+        # I updated the get ratio function in the main function
         """ ----------- Update to get the ratio --------------- """
         prices = {}
         for quote in quotes:

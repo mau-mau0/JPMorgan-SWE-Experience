@@ -21,6 +21,7 @@ class ClientTest(unittest.TestCase):
             },
         ]
         """ ------------ Add the assertion below ------------ """
+        # I added the assertion to check if the correct top_bid, top_ask, and price where being outputed
         for quote in quotes:
             self.assertEqual(
                 getDataPoint(quote),
@@ -50,6 +51,7 @@ class ClientTest(unittest.TestCase):
             },
         ]
         """ ------------ Add the assertion below ------------ """
+        # I added the assertion to check if the correct the top_ask was greater than top_bid
         for quote in quotes:
             self.assertEqual(
                 getDataPoint(quote),
@@ -62,6 +64,7 @@ class ClientTest(unittest.TestCase):
             )
 
     """ ------------ Add more unit tests ------------ """
+    # I added these four test to check if changes I made in the client where functioning correctly
 
     def test_getRatio_calculateRatio(self):
         price_a = 112.74
